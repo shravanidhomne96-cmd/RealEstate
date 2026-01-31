@@ -1,0 +1,15 @@
+<template>
+    <lightning-card title="Property Details" icon-name="standard:house">
+        <div class="slds-p-around_medium">
+            <p><b>Name:</b> {propertyName}</p>
+            <p><b>Location:</b> {location}</p>
+            <p><b>Price:</b> ₹{price}</p>
+
+            <lightning-button 
+                label="View Details" 
+                variant="brand"
+                onclick={handleClick}>
+            </lightning-button>
+        </div>
+    </lightning-card>
+</template>
