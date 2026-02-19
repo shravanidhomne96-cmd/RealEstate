@@ -1,0 +1,89 @@
+/* Tower, Property Units, and Sub Units — Enhanced SLDS-based styling
+   Keep styles additive to SLDS and accessible.
+*/
+
+:host {
+  display: block;
+  padding: 0.5rem;
+}
+
+/* Tower card visuals */
+.tower-card {
+  border-radius: 0.5rem;
+  box-shadow: var(--slds-c-card-shadow, 0 2px 4px rgba(0, 0, 0, 0.1));
+  transition: transform 120ms ease, box-shadow 120ms ease;
+  background: var(--lwc-colorBackgroundAlt, #fff);
+  border: 1px solid var(--lwc-colorBorder, #dddbda);
+  margin-bottom: 1rem;
+}
+
+.tower-card:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+}
+
+.tower-avatar {
+  background: var(--lwc-colorBackgroundHighlight, #f4f6f9);
+  border: 1px solid var(--lwc-colorBorder, #dddbda);
+}
+
+/* Units list */
+.unit-list {
+  max-height: 20rem;
+  overflow: auto;
+  border-radius: 0.25rem;
+  background: #fafaf9;
+  padding: 0.25rem 0;
+  margin-top: 0.5rem;
+}
+
+.unit-item {
+  padding-top: 0.375rem;
+  padding-bottom: 0.375rem;
+  border-bottom: 1px solid var(--lwc-colorBorder, #dddbda);
+}
+
+.unit-item:last-child {
+  border-bottom: none;
+}
+
+.unit-name {
+  font-weight: 600;
+}
+
+/* Sub Units nested list */
+.subunit-toggle {
+  margin-left: 2rem; /* indent toggle to align with unit text */
+}
+
+.subunit-list {
+  margin-left: 2rem; /* indent subunits under their unit */
+  background: var(--lwc-colorBackgroundAlt, #fff);
+  border: 1px dashed var(--lwc-colorBorder, #dddbda);
+  border-radius: 0.25rem;
+  padding: 0.25rem 0.5rem;
+  margin-top: 0.25rem;
+}
+
+.subunit-name {
+  font-weight: 500;
+}
+
+/* Sub-unit count badge emphasis */
+lightning-badge.slds-m-left_x-small {
+  /* Use public tokens */
+  --slds-c-badge-color-background: var(--lwc-colorBackgroundHighlight, #eef4ff);
+  --slds-c-badge-text-color: var(--lwc-colorTextDefault, #032d60);
+}
+
+/* Header styling for better visual hierarchy */
+.slds-card__header-title {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: var(--lwc-colorTextHeading, #032d60);
+}
+
+/* Improve spacing and alignment */
+.slds-grid_vertical-align-center {
+  align-items: center !important;
+}
